@@ -110,40 +110,44 @@ The chassis evolved through physical testing to optimize ambient light entry and
 
 ## Theory of Operation
 
+<div align="center">
+
+```text
 +-------------------------------------------------------------+
 |                        Idle State                           |
-|            (Monitoring GPIO Pin 11 for Button Press)         |
+|            (Monitoring GPIO Pin 11 for Button Press)        |
 +------------------------------+------------------------------+
-|
-v Button Pressed
+                               |
+                               v Button Pressed
 +-------------------------------------------------------------+
 |                   Start Scan Notification                   |
 |            (Pulse Vibration Motor on GPIO 13 for 0.2s)      |
 +------------------------------+------------------------------+
-|
-v
+                               |
+                               v
 +-------------------------------------------------------------+
 |                      Image Capture                          |
 |         (fswebcam captures 640x480 frame down top tower)     |
 +------------------------------+------------------------------+
-|
-v
+                               |
+                               v
 +-------------------------------------------------------------+
 |                 Encoding & Vision Inference                 |
 |     (Convert image to Base64 -> OpenAI gpt-5-nano API)      |
 +------------------------------+------------------------------+
-|
-v
+                               |
+                               v
 +-------------------------------------------------------------+
 |                     Output Synthesis                        |
 |   1. Audio TTS via espeak: Speaks result (e.g. "Green 4")    |
 |   2. Double Haptic Pulse (2x 0.1s buzzes) on GPIO Pin 13    |
 +------------------------------+------------------------------+
-|
-v
+                               |
+                               v
 +-------------------------------------------------------------+
 |                     Return to Idle                          |
 +-------------------------------------------------------------+
+
 
 1. **System Initialization:** The script configures GPIO mode, sets Pin 13 (Motor) as output, and Pin 11 (Button) as an input with an internal pull-up resistor.
 2. **Event Polling:** The main loop continuously checks Pin 11. When pressed (voltage drops to LOW), the scan routine activates.
