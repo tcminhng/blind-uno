@@ -147,7 +147,7 @@ The chassis evolved through physical testing to optimize ambient light entry and
 +-------------------------------------------------------------+
 |                     Return to Idle                          |
 +-------------------------------------------------------------+
-
+```
 
 1. **System Initialization:** The script configures GPIO mode, sets Pin 13 (Motor) as output, and Pin 11 (Button) as an input with an internal pull-up resistor.
 2. **Event Polling:** The main loop continuously checks Pin 11. When pressed (voltage drops to LOW), the scan routine activates.
@@ -177,29 +177,17 @@ The chassis evolved through physical testing to optimize ambient light entry and
 
 5. **Continuing Play:**
    * Remove the card from the top tower and proceed with your turn.
+
+---
+
 ## 📷 Computer Vision & Sample Captures
 
 The internal camera captures high-contrast, framed views of the card face when inserted into the slot.
 
-<div align="center">
-<table width="100%">
-  <tr>
-    <td align="center" width="33.33%"><b>Blue 4 Card</b></td>
-    <td align="center" width="33.33%"><b>Yellow 0 Card</b></td>
-    <td align="center" width="33.33%"><b>Red 0 Card</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="images/captured_image.jpg" width="85%"/></td>
-    <td align="center"><img src="images/captured_image%201.jpg" width="85%"/></td>
-    <td align="center"><img src="images/captured_image%202.jpg" width="85%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><i>Captured Frame (Blue 4)</i></td>
-    <td align="center"><i>Captured Frame (Yellow 0)</i></td>
-    <td align="center"><i>Captured Frame (Red 0)</i></td>
-  </tr>
-</table>
-</div>
+| Blue 4 Card | Yellow 0 Card | Red 0 Card |
+| :--- | :--- | :--- |
+| ![Captured Frame (Blue 4)](images/captured_image.jpg) | ![Captured Frame (Yellow 0)](images/captured_image%201.jpg) | ![Captured Frame (Red 0)](images/captured_image%202.jpg) |
+| *Captured Frame (Blue 4)* | *Captured Frame (Yellow 0)* | *Captured Frame (Red 0)* |
 
 ---
 
