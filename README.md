@@ -127,7 +127,7 @@ The chassis evolved through physical testing to optimize ambient light entry and
                                v
 +-------------------------------------------------------------+
 |                      Image Capture                          |
-|         (fswebcam captures 640x480 frame down top tower)     |
+|         (fswebcam captures 640x480 frame down top tower)    |
 +------------------------------+------------------------------+
                                |
                                v
@@ -139,7 +139,7 @@ The chassis evolved through physical testing to optimize ambient light entry and
                                v
 +-------------------------------------------------------------+
 |                     Output Synthesis                        |
-|   1. Audio TTS via espeak: Speaks result (e.g. "Green 4")    |
+|   1. Audio TTS via espeak: Speaks result (e.g. "Green 4")   |
 |   2. Double Haptic Pulse (2x 0.1s buzzes) on GPIO Pin 13    |
 +------------------------------+------------------------------+
                                |
