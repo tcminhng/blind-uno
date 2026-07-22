@@ -1,4 +1,4 @@
-# BUNO (Blind UNO) — Assistive Gaming Device
+# BUNO (Blind UNO) - Assistive Gaming Device
 
 > **An accessible Raspberry Pi & Computer Vision system enabling visually impaired individuals to play UNO independently through real-time card recognition, state tracking, and audio/haptic feedback.**
 
@@ -35,6 +35,12 @@ The core state machine handles scanning, card verification, and inventory manage
   * **Double Click:** Confirms playing a card from the hand, removing it from the stored inventory.
 * **Button B (Status Check):**
   * **Single Click:** Reads out the current cards held in hand (e.g., *"You have 4 cards: Red 3, Blue Skip, Yellow 2, and Wild"*).
+
+---
+
+## 🎬 Video Demo
+
+▶️ **[Watch the BUNO Project Demo on YouTube](https://youtu.be/Ka0sSeJKYyM)**
 
 ---
 
